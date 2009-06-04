@@ -8,6 +8,7 @@ set ignorecase
 set smartcase
 set scrolloff=5
 set number
+set backspace=indent,eol,start
 colors metacosm
 set hlsearch
 set laststatus=2
@@ -42,7 +43,7 @@ set showcmd
 if has("gui_gtk2")
   set guifont=ProFontWindows\ 9
 elseif has("gui_win32")
-  set guifont=""
+  set guifont=ProFontWindows:h9:cANSI
 endif
 "let test = "タλ©±βΓγπΠεΕσΣΩΨφ£€Θ"
 set guioptions-=l "left scrollbar
@@ -58,7 +59,7 @@ set formatoptions-=c "auto wrap comments
 set formatoptions-=a "auto format paragraphs
 set formatoptions+=n "recognize numbered lists and auto indent wrapped text
 set formatoptions-=t "Auto-wrap text using textwidth
-set tw=80
+set textwidth=78
 
 command -bang -nargs=? QFix call QFixToggle(<bang>0)
 function! QFixToggle(forced)
@@ -72,9 +73,6 @@ function! QFixToggle(forced)
 endfunction
 
 
-map ,f :FilesystemExplorer<CR>
-map ,r :FilesystemExplorerFromHere<CR>
-map ,b :BufferExplorer<CR>
 map ,t <C-]>
 map ,T <C-T>
 map ,a :A<CR>
@@ -82,7 +80,6 @@ map ,u <C-^>
 map <F4> :cnext<CR>
 map <F5> :cprev<CR>
 map <F7> :wa<CR>:make<CR>
-map <F11> :execute ":lcd ".expand("%:p:h")<CR>
 nmap <silent> <F12> :QFix<CR>
 map ; :
 

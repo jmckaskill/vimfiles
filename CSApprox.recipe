@@ -1,0 +1,3 @@
+doc/CSApprox.txt
+plugin/CSApprox.vim
+autoload/csapprox.vim

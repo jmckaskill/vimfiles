@@ -1,0 +1,3 @@
+autoload/vimball.vim
+plugin/vimballPlugin.vim
+doc/pi_vimball.txt
